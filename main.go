@@ -55,13 +55,13 @@ func main() {
 	topic := os.Getenv("TOPIC")
 	for {
 
-		time.Sleep(time.Second * time.Duration(interval))
 		msg := randGen()
 		p.Produce(&kafka.Message{
 			TopicPartition: kafka.TopicPartition{Topic: &topic},
 			Value:          []byte(msg),
 		}, nil)
 		fmt.Println(msg)
+		time.Sleep(time.Second * time.Duration(interval))
 	}
 
 	// Wait for message deliveries before shutting down
