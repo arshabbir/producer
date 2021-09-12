@@ -20,7 +20,7 @@ spec:
        imagePullPolicy: Always
        env:
         - name: TRAFFIC_INTERVAL
-          value : "1"
+          value : "30"
         - name: KAFKA_HOST 
           value : "172.31.38.67:29092"
         - name: TOPIC 
