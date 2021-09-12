@@ -15,9 +15,9 @@ spec:
     app: producer
   spec:
    containers:
-     - image: producerimage
+     - image: arshabbir/producer
        name : producer
-       imagePullPolicy: IfNotPresent
+       imagePullPolicy: Always
        env:
         - name: TRAFFIC_INTERVAL
           value : "1"
