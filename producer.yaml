@@ -1,0 +1,34 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+ name: producerdeployment
+ labels:
+  app: producerdeployment
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: producer
+ template:
+  metadata:
+   labels:
+    app: producer
+  spec:
+   containers:
+     - image: producerimage
+       name : producer
+       imagePullPolicy: IfNotPresent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: producer-service
+spec:
+  type: NodePort
+  selector:
+    app: producer
+  ports:
+    
+    - port: 8082
+      targetPort: 8082
+      nodePort: 30008
