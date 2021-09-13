@@ -1,10 +1,6 @@
 FROM golang
 
 
-ENV PORT ":8082"
-ENV KAFKA_HOST "172.31.38.67:29092"
-ENV TOPIC "myTopic1"
-ENV TRAFFIC_INTERVAL "5"
 
 RUN mkdir /build
 

@@ -22,7 +22,7 @@ spec:
         - name: TRAFFIC_INTERVAL
           value : "30"
         - name: KAFKA_HOST 
-          value : "172.31.38.67:29092"
+          value : "kafka1"
         - name: TOPIC 
           value : "myTopic1"
     
