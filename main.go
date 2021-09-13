@@ -80,6 +80,8 @@ func randGen() string {
 func startMetrics(wait chan int) {
 	r := mux.NewRouter()
 
+	fmt.Println("Starting Metrics server....")
+
 	r.Handle("/v1/metrics", promhttp.Handler())
 
 	r.PathPrefix("/debug/pprof/").Handler(http.DefaultServeMux)

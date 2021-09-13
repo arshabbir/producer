@@ -25,6 +25,8 @@ spec:
           value : "kafka1"
         - name: TOPIC 
           value : "myTopic1"
+        - name: PORT 
+          value : ":8082"
     
 
 
